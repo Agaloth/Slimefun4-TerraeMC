@@ -36,7 +36,13 @@ import io.github.thebusybiscuit.slimefun4.utils.JsonUtils;
  */
 public class TapeMeasure extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable {
 
-    private final NamespacedKey key = new NamespacedKey(Slimefun.instance(), "anchor");
+    private final NamespacedKey key;
+
+    {
+        assert Slimefun.instance() != null;
+        key = new NamespacedKey(Slimefun.instance(), "anchor");
+    }
+
     private final DecimalFormat format = new DecimalFormat("##.###");
 
     @ParametersAreNonnullByDefault
@@ -71,6 +77,7 @@ public class TapeMeasure extends SimpleSlimefunItem<ItemUseHandler> implements N
         json.addProperty("y", block.getY());
         json.addProperty("z", block.getZ());
 
+        assert meta != null;
         meta.getPersistentDataContainer().set(key, PersistentDataType.STRING, json.toString());
 
         String anchor = block.getX() + " | " + block.getY() + " | " + block.getZ();

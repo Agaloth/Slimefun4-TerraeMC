@@ -37,7 +37,7 @@ public abstract class NetherStarReactor extends Reactor {
 
     @Override
     protected void registerDefaultFuelTypes() {
-        registerFuel(new MachineFuel(1800, new ItemStack(Material.NETHER_STAR)));
+        registerFuel(new MachineFuel(2700, new ItemStack(Material.DRAGON_EGG)));
     }
 
     @Override
@@ -58,12 +58,12 @@ public abstract class NetherStarReactor extends Reactor {
 
     @Override
     public ItemStack getFuelIcon() {
-        return new ItemStack(Material.NETHER_STAR);
+        return new ItemStack(Material.DRAGON_EGG);
     }
 
     @Override
     public ItemStack getProgressBar() {
-        return new ItemStack(Material.NETHER_STAR);
+        return new ItemStack(Material.DRAGON_EGG);
     }
 
 }
