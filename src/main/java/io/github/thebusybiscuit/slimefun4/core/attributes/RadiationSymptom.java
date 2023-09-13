@@ -25,11 +25,10 @@ import io.github.thebusybiscuit.slimefun4.utils.RadiationUtils;
  */
 public enum RadiationSymptom {
 
-    SLOW(10, PotionEffectType.SLOW, 3),
-    WITHER_LOW(25, PotionEffectType.WITHER, 0),
-    BLINDNESS(50, PotionEffectType.BLINDNESS, 4),
-    WITHER_HIGH(75, PotionEffectType.WITHER, 3),
-    IMMINENT_DEATH(100, PotionEffectType.HARM, 49);
+    SLOW(10, PotionEffectType.SLOW, 0),
+    SLOW_1(30, PotionEffectType.SLOW, 1),
+    SLOW_2(50, PotionEffectType.SLOW, 2),
+    BLINDNESS(50, PotionEffectType.BLINDNESS, 4);
 
     private final int minExposure;
     private final PotionEffect potionEffect;
